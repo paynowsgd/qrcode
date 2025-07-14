@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice - Our Vape Store</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Roboto:wght@300;400;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #fff0f6, #ffffff);
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      padding: 1.5rem 1rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: deeppink;
+      font-family: "Baloo 2", cursive;
+      margin-bottom: 15px;
+      font-size: 2em;
+      text-shadow: 1px 1px 0 #ffcde8;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px auto 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      border-radius: 10px;
+      background: white;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    th, td {
+      border: 1px solid #f3cce9;
+      padding: 12px 15px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: deeppink;
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .payment-details {
+      background: #fff0f6;
+      border-radius: 14px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      margin-bottom: 60px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .payment-details:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .payment-details h3 {
+      color: deeppink;
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .paynow-img {
+      display: block;
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      margin: 20px auto;
+    }
+
+    .btn-small {
+      display: block;
+      background: linear-gradient(135deg, deeppink, #ff77c0);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+      margin: 10px auto;
+      max-width: 160px;
+      transition: transform 0.2s ease, background 0.3s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .btn-small:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff1493, #ff91c9);
+    }
+
+    .instructions {
+      text-align: left;
+      max-width: 90%;
+      margin: 0 auto;
+      padding-left: 1rem;
+    }
+
+    .instructions li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #5e2a4f;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice-container">
+    <h1>Invoice - Our Vape Store</h1>
+    <h2>Customer Order Summary</h2>
+    <table>
+      <thead>
+        <tr><th>Description</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Customer Name</td><td id="customerName">Loading...</td></tr>
+        <tr><td>Email Address</td><td id="emailAddress">Loading...</td></tr>
+        <tr><td>Contact Number</td><td id="contactNumber">Loading...</td></tr>
+        <tr><td>Delivery Address</td><td id="deliveryAddress">Loading...</td></tr>
+        <tr><td>Date to Deliver</td><td id="deliveryDate">Loading...</td></tr>
+        <tr><td>Time to Deliver</td><td id="deliveryTime">Loading...</td></tr>
+        <tr><td>Products Ordered</td><td id="productsOrdered">Loading...</td></tr>
+        <tr><td>Total Amount</td><td class="highlight" id="totalAmount">$0.00</td></tr>
+      </tbody>
+    </table>
+
+    <div class="payment-details">
+      <h3>Payment Instructions</h3>
+      <img src="/paynowqrcode30.png" class="paynow-img" alt="PayNow QR Code" />
+      <div class="btn-container">
+        <a href="/paynowqrcode30.png" download="PaynowQRCode.png" class="btn-small">Save QR Code</a>
+      </div>
+      <ol class="instructions">
+        <li>Tap and save the QR code to your phone gallery.</li>
+        <li>Open your iBanking app and upload the QR image.</li>
+        <li>Enter the amount shown above in your order summary.</li>
+        <li>Complete the payment, then screenshot the receipt.</li>
+        <li>Send the receipt screenshot to us via WhatsApp or email.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
